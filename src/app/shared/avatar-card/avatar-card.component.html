@@ -1,0 +1,31 @@
+<div class="card aside">
+  <div class="avatar">
+    <div class="avatar-content">
+      <img src="../assets/images/image-jeremy.png" alt="avatar-image" />
+      <div class="text">
+        <p class="label-for">Report for</p>
+        <p class="name">Jeremy Robson</p>
+      </div>
+    </div>
+  </div>
+  <ul class="period">
+    <li
+      [class.active]="selectedPeriod === 'Daily'"
+      (click)="setActive.emit('Daily')"
+    >
+      Daily
+    </li>
+    <li
+      [class.active]="selectedPeriod === 'Weekly'"
+      (click)="setActive.emit('Weekly')"
+    >
+      Weekly
+    </li>
+    <li
+      [class.active]="selectedPeriod === 'Monthly'"
+      (click)="setActive.emit('Monthly')"
+    >
+      Monthly
+    </li>
+  </ul>
+</div>

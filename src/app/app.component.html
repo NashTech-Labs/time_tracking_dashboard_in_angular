@@ -1,0 +1,28 @@
+<main>
+  <div class="grid">
+    <div class="a">
+      <app-avatar-card
+        (setActive)="setActive($event)"
+        [selectedPeriod]="selectedPeriod"
+      ></app-avatar-card>
+    </div>
+    <div *ngFor="let item of data">
+      <app-activity-card
+        [selectedPeriod]="selectedPeriod"
+        [periodLabel]="periodLabel"
+        [item]="item"
+      ></app-activity-card>
+    </div>
+  </div>
+</main>
+<footer>
+  <p class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by
+    <a href="https://www.frontendmentor.io/profile/feliceNicolasBarcellona"
+      >Felice Nicolas Barcellona</a
+    >.
+  </p>
+</footer>
